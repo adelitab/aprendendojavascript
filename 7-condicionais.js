@@ -19,17 +19,24 @@ const listaDeDestinos = new Array(
 
 
 const idadeComprador = 21;
+//const estaAcompanhada = true;
 
 console.log("Destinos Possíveis: ");
 console.log(listaDeDestinos);
 
-if(idadeComprador >= 18){
+if (idadeComprador >= 18) {
+    //vai imprimir Salvador e Rio de Janeiro, como se tivesse comprado passagem para São Paulo
     console.log("Comprador Maior de Idade");
-    listaDeDestinos.splice(1,1); //removendo item.
-    //vai imprimir Salvador e Rio de Janeiro
-}else{
+    listaDeDestinos.splice(1, 1); //removendo item.
+} else if (estaAcompanhada == true) {
+    //A pessoa é menor de idade
+    console.log("Comprador está acompanhado");
+    listaDeDestinos.splice(1, 1); //removendo item.
+} else {
     console.log("Não é maior de idade. Não posso vender");
 }
+
+// Alt + Shift + F = arruma a identação
 
 console.log(listaDeDestinos);
 
